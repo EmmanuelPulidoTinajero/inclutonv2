@@ -6,8 +6,27 @@
     "target": "es5",
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": [
+      "node",
+      "@types/mdx",
+      "@types/gtag.js",
+      "@types/unist",
+      "@types/hast",
+      "@types/estree"
+    ]
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",
+    "docs/**/*",
+    "*.ts",
+    "*.tsx"
+  ],
   "exclude": ["node_modules"]
 }

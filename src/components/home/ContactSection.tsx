@@ -5,7 +5,7 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 //TODO problemas de iconos es aca
-import { Instagram, Linkedin, Facebook, Send, Music2 } from 'lucide-react';
+import { Instagram, Linkedin, Facebook, Music2 } from 'lucide-react';
 import { useState, useRef } from 'react';
 import React from 'react';
 
@@ -44,16 +44,20 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      // Simular envío
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Obtener los datos del formulario
+      const form = e.target as HTMLFormElement;
+      const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+      const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+      const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+      
+      const formValues = { name, email, message };
+      
+      // TODO: Implement API call
+      console.log('Form data:', formValues);
       setSuccess(true);
       formRef.current?.reset();
-      
-      // Feedback auditivo
-      const msg = new SpeechSynthesisUtterance('Mensaje enviado con éxito');
-      window.speechSynthesis.speak(msg);
-    } catch (err) {
-      setError('Error al enviar el mensaje. Por favor intente nuevamente.');
+    } catch (_err) {
+      setError('Hubo un error al enviar tu mensaje. Por favor intenta nuevamente.');
     } finally {
       setIsSubmitting(false);
     }

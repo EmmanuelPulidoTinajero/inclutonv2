@@ -15,7 +15,7 @@ type FormFieldProps = {
     disabled?: boolean;
     type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'date' | 'textarea' | 'select';
     options?: { value: string; label: string }[];
-    onChange?: (value: any) => void;
+    onChange?: (value: string | number) => void;
 };
 
 export function FormField({

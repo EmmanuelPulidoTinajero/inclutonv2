@@ -92,7 +92,7 @@ export default function ChallengesPreview() {
                   className="w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:shadow-xl transition-all duration-300"
                   style={{ background: challenge.color }}
                 >
-                  {React.cloneElement(challenge.icon as any, { className: "w-8 h-8" })}
+                  {React.cloneElement(challenge.icon as React.ReactElement<{className?: string}>, { className: "w-8 h-8" })}
                 </div>
               </div>
               <div className="flex items-center space-x-2 mb-4">
@@ -130,7 +130,7 @@ export default function ChallengesPreview() {
         <div className="text-center">
           <div className="text-center">
             <a href="/challenges">
-//todo se cambia link por etiqueta a ,revisar si ahi error
+              {/* TODO: se cambia link por etiqueta a, revisar si hay error */}
               <Button className="group bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white text-lg px-8 py-6 h-auto">
                 Ver más desafíos
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

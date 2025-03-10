@@ -65,7 +65,7 @@ export default function AboutSection() {
                   className="w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:shadow-xl transition-all duration-300"
                   style={{ background: pillar.color }}
                 >
-                  //TODO - Revisar el uso de React.cloneElement especificamente el className si ahi error
+                  {/* TODO - Revisar el uso de React.cloneElement especificamente el className si ahi error */}
                   {React.cloneElement(pillar.icon as React.ReactElement<{className?: string}>, { className: "w-8 h-8" })}
                 </div>
               </div>

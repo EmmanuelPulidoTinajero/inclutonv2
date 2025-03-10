@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-const { themes } = require('prism-react-renderer');
+import { themes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -16,7 +16,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo_incluton.png',
 
   // GitHub pages deployment config.
   organizationName: 'incluton',
@@ -26,8 +26,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
   },
 
   presets: [
@@ -38,7 +38,9 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -51,17 +53,82 @@ const config = {
     ({
       navbar: {
         title: 'INCLUTON 2025',
+        logo: {
+          alt: 'Incluton Logo',
+          src: 'img/logo_incluton.png',
+        },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Documentación',
+          },
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left'
+          },
+          {
+            to: '/challenges',
+            label: 'Desafíos',
+            position: 'left',
+          },
+          {
+            to: '/about',
+            label: 'Nosotros',
+            position: 'left',
+          },
+          {
+            to: '/contact',
+            label: 'Contacto',
+            position: 'right',
           },
         ],
       },
       footer: {
         style: 'dark',
+        links: [
+          {
+            title: 'Contenido',
+            items: [
+              {
+                label: 'Documentación',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Desafíos',
+                to: '/challenges',
+              },
+            ],
+          },
+          {
+            title: 'Comunidad',
+            items: [
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/company/incluton',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/incluton',
+              },
+            ],
+          },
+          {
+            title: 'Más',
+            items: [
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/incluton',
+              },
+            ],
+          },
+        ],
         copyright: `Copyright © ${new Date().getFullYear()} INCLUTON. Built with Docusaurus.`,
       },
       prism: {
@@ -71,4 +138,4 @@ const config = {
     }),
 };
 
-module.exports = config;
+export default config;

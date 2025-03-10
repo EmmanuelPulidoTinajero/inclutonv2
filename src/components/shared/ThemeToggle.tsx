@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { Switch } from '../ui/switch';
 import { Label } from '../ui/label';

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -73,7 +72,7 @@ export function SponsorRegistrationForm({ selectedPlan }: SponsorRegistrationFor
 
       console.log('Form data:', data);
       setSuccess(true);
-    } catch (err) {
+    } catch (_err) {
       setError('Hubo un error al procesar tu registro. Por favor intenta nuevamente.');
     } finally {
       setIsSubmitting(false);

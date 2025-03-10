@@ -71,7 +71,7 @@ export function MentorRegistrationForm() {
       // TODO: Implement API call
       console.log('Form data:', data);
       setSuccess(true);
-    } catch (err) {
+    } catch (_err) {
       setError('Hubo un error al procesar tu registro. Por favor intenta nuevamente.');
     } finally {
       setIsSubmitting(false);
