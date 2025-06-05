@@ -1,11 +1,22 @@
 import * as React from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
+import useIsBrowser from "@docusaurus/core/lib/client/exports/useIsBrowser";
 import { Toaster as Sonner } from 'sonner';
 
+type ColorMode = 'light' | 'dark' | 'system';
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { colorMode: theme = 'system' } = useColorMode();
+  const isBrowser = useIsBrowser();
+
+  let theme: ColorMode = 'system';
+
+  if (isBrowser) {
+    const { colorMode: browserColorMode } = useColorMode();
+    theme = browserColorMode;
+  } else {
+    return null;
+  }
 
   return (
     <Sonner

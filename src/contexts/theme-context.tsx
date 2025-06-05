@@ -1,13 +1,13 @@
-// Theme context for INCLUTON 2025
 import React, { createContext, useContext, ReactNode } from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
+import useIsBrowser from "@docusaurus/core/lib/client/exports/useIsBrowser";
 
 export const theme = {
   colors: {
     primary: {
       gradient: {
-        start: "#FF6B2B",  // Naranja vibrante
-        end: "#2B7BFF"     // Azul brillante
+        start: "#FF6B2B",
+        end: "#2B7BFF"
       }
     },
     brand: {
@@ -18,11 +18,11 @@ export const theme = {
       purple: "#9C27B0",
       teal: "#00BCD4",
       categories: {
-        visual: "#FF6B2B",    // Naranja para accesibilidad visual
-        auditiva: "#2B7BFF",  // Azul para accesibilidad auditiva
-        motriz: "#4CAF50",    // Verde para accesibilidad motriz
-        cognitiva: "#FFD700", // Amarillo para accesibilidad cognitiva
-        multiple: "#9C27B0"   // Púrpura para múltiple
+        visual: "#FF6B2B",
+        auditiva: "#2B7BFF",
+        motriz: "#4CAF50",
+        cognitiva: "#FFD700",
+        multiple: "#9C27B0"
       }
     },
     sponsors: {
@@ -45,26 +45,40 @@ export const theme = {
   }
 } as const;
 
-const ThemeContext = createContext(theme);
+type ThemeContextType = typeof theme & {
+  isDark: boolean;
+  colorMode: 'light' | 'dark' | undefined; // 'undefined' for SSR
+};
 
-export const useTheme = () => {
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+export function useTheme() {
   const context = useContext(ThemeContext);
-  const { colorMode } = useColorMode();
-  
+  const isBrowser = useIsBrowser();
+
+  let colorMode: 'light' | 'dark' | undefined = undefined;
+  let isDark = false;
+
+  if (isBrowser) {
+    const { colorMode: docusaurusColorMode } = useColorMode();
+    colorMode = docusaurusColorMode;
+    isDark = docusaurusColorMode === 'dark';
+  }
+
   if (!context) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
-  
+
   return {
     ...context,
-    isDark: colorMode === 'dark',
+    isDark,
     colorMode,
   };
-};
+}
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={theme as ThemeContextType}>
       {children}
     </ThemeContext.Provider>
   );
