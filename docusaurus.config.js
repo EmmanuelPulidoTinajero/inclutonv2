@@ -40,7 +40,6 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          onBrokenLinks: 'ignore',
         },
         theme: {
           customCss: './src/css/custom.css',
