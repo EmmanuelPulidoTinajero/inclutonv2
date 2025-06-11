@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { useColorMode } from '@docusaurus/theme-common';
+import { ThemeContext } from '../../contexts/theme-context';
 import { Toaster as Sonner } from 'sonner';
 
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { colorMode: theme = 'system' } = useColorMode();
+  const theme = React.useContext(ThemeContext);
 
   return (
     <Sonner
