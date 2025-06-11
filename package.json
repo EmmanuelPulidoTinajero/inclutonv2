@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@csstools/postcss-trigonometric-functions": "^4.0.7",
-    "@docusaurus/core": "3.7.0",
-    "@docusaurus/preset-classic": "3.7.0",
+    "@docusaurus/core": "^3.8.1",
+    "@docusaurus/preset-classic": "^3.8.1",
     "@hookform/resolvers": "^4.1.2",
     "@mdx-js/react": "^3.0.0",
     "@radix-ui/react-accordion": "^1.2.3",
@@ -45,8 +45,8 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.26.0",
-    "@docusaurus/module-type-aliases": "3.7.0",
-    "@docusaurus/types": "3.7.0",
+    "@docusaurus/module-type-aliases": "^3.8.1",
+    "@docusaurus/types": "^3.8.1",
     "@eslint/js": "^8.56.0",
     "@types/estree": "^1.0.6",
     "@types/gtag.js": "^0.0.20",
@@ -80,6 +80,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=18.18.0 || >=20.0.0"
   }
 }
