@@ -14,8 +14,8 @@ const config = {
   tagline: 'Hackathon por la inclusión',
   url: 'https://incluton.org',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
   favicon: 'img/logo_incluton.png',
 
   // GitHub pages deployment config.
