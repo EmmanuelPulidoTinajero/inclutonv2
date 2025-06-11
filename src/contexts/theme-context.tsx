@@ -55,7 +55,7 @@ export const useTheme = () => {
   if (!context) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
-  
+
   return {
     ...context,
     isDark: colorMode === 'dark',
@@ -64,6 +64,11 @@ export const useTheme = () => {
       setColorMode(mode);
       localStorage.setItem('theme', mode);
       document.documentElement.setAttribute('data-theme', mode);
+      if (mode === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     }
   };
 };
