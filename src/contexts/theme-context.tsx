@@ -1,6 +1,5 @@
 // Theme context for INCLUTON 2025
 import React, { createContext, useContext, ReactNode } from 'react';
-import { useColorMode } from '@docusaurus/theme-common';
 
 export const theme = {
   colors: {
@@ -45,12 +44,14 @@ export const theme = {
   }
 } as const;
 
-const ThemeContext = createContext(theme);
+export const ThemeContext = createContext(theme);
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);
-  const { colorMode } = useColorMode();
-  
+  const [colorMode, setColorMode] = React.useState<'light' | 'dark'>(
+    localStorage.getItem('theme') as 'light' | 'dark' || 'light'
+  );
+
   if (!context) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
@@ -59,6 +60,11 @@ export const useTheme = () => {
     ...context,
     isDark: colorMode === 'dark',
     colorMode,
+    setColorMode: (mode: 'light' | 'dark') => {
+      setColorMode(mode);
+      localStorage.setItem('theme', mode);
+      document.documentElement.setAttribute('data-theme', mode);
+    }
   };
 };
 
