@@ -84,7 +84,7 @@ export function MentorRegistrationForm() {
     return (
       <FormWrapper
         title="¡Registro Exitoso!"
-        description="Gracias por tu interés en ser mentor en INCLUTON 2025"
+        description="Gracias por tu interés en ser mentor en INCLUTON"
         success="Evaluaremos tu perfil y te contactaremos pronto."
       >
         <div className="text-center">

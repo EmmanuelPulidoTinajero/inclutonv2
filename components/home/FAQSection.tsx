@@ -19,7 +19,7 @@ const categories = [
       },
       {
         question: "¿Cuándo y dónde se realiza?",
-        answer: "El evento se realizará del 12 al 18 de Mayo de 2025, en formato híbrido con actividades virtuales y presenciales."
+        answer: "El evento se realizará muy pronto, en formato híbrido con actividades virtuales y presenciales."
       },
       {
         question: "¿Quién puede participar?",

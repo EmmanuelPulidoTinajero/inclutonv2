@@ -83,7 +83,7 @@ export default function HeroSection() {
           Transforma el futuro con tecnología inclusiva
         </h1>
         <p className="text-xl md:text-2xl mb-12 text-gray-200" style={{ fontFamily: theme.fonts.body }}>
-          Únete a INCLUTON 2025
+          Únete a INCLUTON
         </p>
         <Button 
           size="lg" 
@@ -97,7 +97,7 @@ export default function HeroSection() {
         <div className="flex items-center justify-center gap-3 bg-black/30 backdrop-blur-md px-6 py-3 rounded-full mb-4">
           <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse shadow-lg shadow-green-400/50" />
           <p className="text-white dark:text-white font-medium tracking-wide">
-            12-18 de Mayo, 2025 · Faltan {Math.ceil((new Date('2025-05-12').getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} días
+            Muy pronto
           </p>
         </div>
 

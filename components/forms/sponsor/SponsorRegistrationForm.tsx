@@ -74,7 +74,7 @@ export function SponsorRegistrationForm({ selectedPlan }: SponsorRegistrationFor
     return (
       <FormWrapper
         title="¡Registro Exitoso!"
-        description="Gracias por tu interés en patrocinar INCLUTON 2025"
+        description="Gracias por tu interés en patrocinar INCLUTON"
         success="Te contactaremos pronto para coordinar los siguientes pasos."
       >
         <div className="text-center">

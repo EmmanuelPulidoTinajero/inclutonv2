@@ -50,7 +50,7 @@ export default function RegistrationSection() {
         >
           <h2 className="text-4xl font-bold mb-6">Regístrate y Transforma el Futuro</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Únete a INCLUTON 2025 y sé parte del cambio hacia una tecnología más inclusiva
+            Únete a INCLUTON y sé parte del cambio hacia una tecnología más inclusiva
           </p>
         </motion.div>
 

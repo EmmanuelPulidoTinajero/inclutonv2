@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'INCLUTON 2025 - Transforma el futuro con tecnología inclusiva',
-  description: 'Únete al hackathon más inclusivo de 2025. Del 12 al 18 de Mayo, creando tecnología accesible para todos.',
+  title: 'INCLUTON - Transforma el futuro con tecnología inclusiva',
+  description: 'Únete al hackathon más inclusivo. Muy pronto, creando tecnología accesible para todos.',
   keywords: 'hackathon, inclusión, tecnología, accesibilidad, innovación social',
 };
 

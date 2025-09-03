@@ -13,7 +13,7 @@ export default function VideoSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-6">Conoce INCLUTON 2025</h2>
+          <h2 className="text-4xl font-bold mb-6">Conoce INCLUTON</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Descubre cómo estamos transformando el futuro de la tecnología inclusiva
           </p>
@@ -29,11 +29,11 @@ export default function VideoSection() {
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/your-video-id"
-            title="INCLUTON 2025 - Transforma el futuro con tecnología inclusiva"
+            title="INCLUTON - Transforma el futuro con tecnología inclusiva"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full h-full"
-            aria-label="Video de presentación de INCLUTON 2025"
+            aria-label="Video de presentación de INCLUTON"
           ></iframe>
           <div className="mt-4">
             <a 

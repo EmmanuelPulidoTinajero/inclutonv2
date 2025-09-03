@@ -21,7 +21,7 @@ const plans = [
       "Difusión en redes sociales",
       "Mentores técnicos de apoyo",
       "Presencia de marca digital",
-      "Certificado Inclusivo 2025"
+      "Certificado Inclusivo"
     ]
   },
   {
@@ -81,7 +81,7 @@ const plans = [
     icon: <Star className="w-8 h-8" />,
     benefits: [
       "Presencia en Catálogo LATAM",
-      "Certificación Inclusiva 2025",
+      "Certificación Inclusiva",
       "Red de innovación inclusiva",
       "Reporte personalizado",
       "Menciones en medios"

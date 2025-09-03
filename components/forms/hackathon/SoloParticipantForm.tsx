@@ -69,7 +69,7 @@ export function SoloParticipantForm() {
     return (
       <FormWrapper
         title="¡Registro Exitoso!"
-        description="¡Bienvenido a INCLUTON 2025!"
+        description="¡Bienvenido a INCLUTON!"
         success="Te hemos enviado un email con los siguientes pasos."
       >
         <div className="text-center space-y-6">

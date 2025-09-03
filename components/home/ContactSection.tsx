@@ -144,7 +144,7 @@ export default function ContactSection() {
             <h3 className="text-2xl font-semibold mb-6">Conéctate con nosotros</h3>
             <p className="text-gray-600 mb-8">
               Síguenos en nuestras redes sociales para estar al día con las últimas novedades,
-              workshops y oportunidades de INCLUTON 2025.
+              workshops y oportunidades de INCLUTON.
             </p>
             
             <div className="space-y-6">

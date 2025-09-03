@@ -1,4 +1,4 @@
-// Theme context for INCLUTON 2025
+// Theme context for INCLUTON
 'use client';
 
 import React, { createContext, useContext, ReactNode, useEffect } from 'react';

@@ -56,10 +56,6 @@ export default function EventStructureSection() {
   const [isSummitModalOpen, setSummitModalOpen] = useState(false);
   const [showHackathonChoices, setShowHackathonChoices] = useState(false);
   const [showHackathonForm, setShowHackathonForm] = useState(false);
-  const eventDate = new Date('2025-05-12');
-  const now = new Date();
-  const timeLeft = eventDate.getTime() - now.getTime();
-  const daysLeft = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
 
   const handleHackathonChoice = (choice: 'team' | 'solo') => {
     setShowHackathonChoices(false);
@@ -86,11 +82,7 @@ export default function EventStructureSection() {
           <div className="flex items-center justify-center mt-8 space-x-4">
             <div className="flex items-center space-x-2 text-primary">
               <Calendar className="w-5 h-5" />
-              <span>12-18 Mayo, 2025</span>
-            </div>
-            <div className="flex items-center space-x-2 text-primary">
-              <Timer className="w-5 h-5" />
-              <span>Faltan {daysLeft} días</span>
+              <span>Muy pronto</span>
             </div>
           </div>
         </motion.div>

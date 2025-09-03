@@ -76,7 +76,7 @@ export function SpeakerRegistrationForm() {
     return (
       <FormWrapper
         title="¡Propuesta Recibida!"
-        description="Gracias por tu interés en ser expositor en INCLUTON 2025"
+        description="Gracias por tu interés en ser expositor en INCLUTON"
         success="Evaluaremos tu propuesta y te contactaremos pronto."
       >
         <div className="text-center">
@@ -97,7 +97,7 @@ export function SpeakerRegistrationForm() {
   return (
     <FormWrapper
       title="Registro de Expositor"
-      description="Comparte tu conocimiento y experiencia en INCLUTON 2025"
+      description="Comparte tu conocimiento y experiencia en INCLUTON"
       error={error}
     >
       <FormProvider {...methods}>
